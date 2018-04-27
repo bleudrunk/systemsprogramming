@@ -1,6 +1,6 @@
 #include "input.h"
 
-int main(void)
+int main(int argc, char const *argv[])
 {
     int c;
 
