@@ -1,8 +1,9 @@
 #include "input.h"
+void open_file(*a);
 
 int main(int argc, char const *argv[])
 {
-    int c;
+    open_file(&argv[1]);
 
     while (1) {
         c = kbget();        // Get input
@@ -27,4 +28,10 @@ int main(int argc, char const *argv[])
     printf("\n");
 
     return 0;
+}
+
+
+void open_file(*a) {
+  FILE
+
 }
