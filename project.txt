@@ -1,0 +1,9 @@
+In order to display the contents of the file on screen in your project; you will need to be able to refresh the contents of terminal screen. You can do this by clearing the screen and displaying the contents of the file from scratch every time a change is applied. This can be achieved by relocating the cursor on screen.
+
+You will be provided with an example program. In input.h, there are functions which you can use in your project for reading keyboard input from the user. test.c includes an example main function which relocates the cursor on terminal screen.
+
+As you can see in the example program, you can read keyboard input simply by calling the function kbget(). You can check whether the key pressed is an arrow key by comparing the user input to KEY_LEFT, KEY_RIGHT, KEY_UP, and KEY_DOWN.
+
+Relocating the cursor is done by printing special characters. You can move the cursor one character right by calling printf("\033[1D"), and one left by calling printf("\033[1C"). An alternative way to move the cursor is to call printf function as printf("\033[5;3H"). This call moves the cursor to 5[th] row, 3[rd] column. You can move the cursor to a variable position by replacing the numbers in the printf. This can be done, for example as printf("\033[%d;%dH", row, col).
+
+In the project, you will need to remember which position the cursor is in, so that you can apply the user commands at the right position. Define two variables which store the cursor line and column; and update these variables appropriately as you move the cursor around the screen.
